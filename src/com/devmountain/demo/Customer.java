@@ -8,6 +8,12 @@ public class Customer {
         this.name = name;
     this.creditCard = new CreditCard(ccNumber);
 
+    public Order(ShoppingCart cart){
+        Optional<Payment> =creditCard.mkPayment(cart.getTotalCost());
+//        return payment.isPresent() ? Optional.of(new Order(this,cart,payment.get())): Optional.empty();
+        return payment.map(value-> new Order(this,cart,value));
+    }
+
     @Override
     public String toString(){
         return "Customer{" +
