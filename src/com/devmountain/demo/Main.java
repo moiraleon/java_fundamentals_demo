@@ -1,4 +1,4 @@
-package com.devmountain.game2;
+package com.devmountain.demo;
 
 public class Main {
 
